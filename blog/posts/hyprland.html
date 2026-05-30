@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,46 +8,72 @@
 </head>
 <body>
 
-<main class="blog-post-page">
-    <article>
-        <h1>Hyprland Setup! — May 29, 2026</h1>
+<div class="layout">
 
-        <p>
-            After using Linux Mint XFCE for a few months and loving it,
-            I wanted to switch to Arch Linux because of the rolling
-            release model and lightweight nature of the system.
+    <aside class="sidebar">
+        <h1>Nora Hancock</h1>
+
+        <p class="tagline">
+            dev<br>
+            student<br>
+            linux
         </p>
 
-        <p>
-            Somehow, the installation process went smoothly and I got
-            Arch installed. I then wanted to try a tiling window manager,
-            and I landed on Hyprland.
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../about.html">About</a>
+            <a href="../blog.html" class="active">Thoughts</a>
+        </nav>
+    </aside>
+
+    <main class="content">
+
+        <article>
+
+            <h1>Hyprland Setup!</h1>
+
+            <p class="date">May 29, 2026</p>
+
+            <p>
+                After using Linux Mint XFCE for a few months and loving it,
+                I wanted to switch to Arch Linux because of the rolling
+                release model and lightweight nature of the system.
+            </p>
+
+            <p>
+                Somehow, the installation process went smoothly and I got
+                Arch installed. I then wanted to try a tiling window manager,
+                and I landed on Hyprland.
+            </p>
+
+            <p>
+                Unlike regular stacking window managers such as macOS,
+                GNOME, or Windows, every time you open a window on Hyprland
+                it automatically tiles. This is super useful for students
+                because it's easy to keep multiple apps open at the same time.
+            </p>
+
+            <p>
+                As a CS student and a high school student taking advanced
+                classes, this helps me multitask and stay productive.
+                I've attached my dotfiles below.
+            </p>
+
+            <p>
+                <a href="https://github.com/nrhnck/dotfiles" target="_blank">
+                    View my dotfiles →
+                </a>
+            </p>
+
+        </article>
+
+        <p class="back-link">
+            <a href="../blog.html">← Back to Thoughts</a>
         </p>
 
-        <p>
-            Unlike regular stacking window managers such as macOS,
-            GNOME, or Windows, every time you open a window on Hyprland
-            it automatically tiles. This is super useful for students
-            because it's easy to keep multiple apps open at the same time.
-        </p>
+    </main>
 
-        <p>
-            As a CS student and a high school student taking advanced
-            classes, this helps me multitask and stay productive.
-            I've attached my dotfiles below.
-        </p>
-
-        <p>
-            <a href="https://github.com/nrhnck/dotfiles" target="_blank">
-                View my dotfiles
-            </a>
-        </p>
-    </article>
-
-    <nav style="margin-top: 50px;">
-        <a href="../blog.html">← Back to Index</a>
-    </nav>
-</main>
+</div>
 
 </body>
 </html>

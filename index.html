@@ -9,23 +9,55 @@
 
 <body>
 
-<header>
-    <h1>Nora Hancock</h1>
-    <p class="subtitle">dev • student • linux</p>
-</header>
+<div class="layout">
 
-<main>
+    <aside class="sidebar">
+        <h1>Nora Hancock</h1>
 
-    <img src="images/fern.jpg" alt="Tree" class="hero">
+        <p class="tagline">
+            dev<br>
+            student<br>
+            linux
+        </p>
 
-    <nav class="links">
-        <a href="about.html">about me</a> //
-        <a href="blog/blog.html">Blog</a>
-    </nav>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="blog/blog.html">Thoughts</a>
+            <a href="#">Projects</a>
+            <a href="#">Uses</a>
+            <a href="#">Contact</a>
+        </nav>
 
-    <p id="time"></p>
+        <p id="time"></p>
+    </aside>
 
-</main>
+    <main class="content">
+
+        <img src="images/fern.jpg" alt="Tree" class="hero">
+
+        <h2>Welcome.</h2>
+
+        <p>
+            Hi, I'm Nora. I'm a student interested in technology,
+            Linux, photography, and documenting things I learn.
+        </p>
+
+        <p>
+            This site is a collection of notes, projects, photos,
+            and thoughts.
+        </p>
+
+        <h3>Recent Posts</h3>
+
+        <ul class="recent-posts">
+            <li><a href="blog/posts/hyprland.html">Hyprland Setup</a></li>
+            <li><a href="blog/posts/first-post.html">First Post</a></li>
+        </ul>
+
+    </main>
+
+</div>
 
 <script src="script.js"></script>
 
