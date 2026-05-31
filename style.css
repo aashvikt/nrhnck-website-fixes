@@ -1,30 +1,38 @@
+:root {
+    --bg: #f7f7fb;
+    --text: #1a1a1a;
+    --accent: #2563eb;
+    --accent-hover: #1d4ed8;
+    --card: #ffffff;
+}
+
 body {
-    background: black;
-    color: white;
+    background: var(--bg);
+    color: var(--text);
     font-family: Georgia, serif;
     font-size: 20px;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    text-align: center; /* center all text */
+    text-align: center;
 }
+
+/* Header */
 header {
     padding: 60px 20px 40px;
 }
 
-h1 {
+h1, h2 {
     font-size: 3.5rem;
     margin-bottom: 15px;
 }
-h2 {
-    font-size: 3.5rem;
-    margin-bottom: 15px;
-}
+
 .subtitle {
     font-size: 1.5rem;
     margin-bottom: 40px;
 }
 
+/* Hero image */
 .hero {
     width: 600px;
     max-width: 90%;
@@ -32,10 +40,12 @@ h2 {
     object-fit: cover;
     display: block;
     margin: 0 auto 40px;
+    border-radius: 10px;
 }
 
+/* Navigation links */
 .links a {
-    color: white;
+    color: var(--text);
     text-decoration: none;
     margin: 0 10px;
     font-size: 1.2rem;
@@ -43,50 +53,66 @@ h2 {
 }
 
 .links a:hover {
+    color: var(--accent);
     text-decoration: underline;
-    color: #FFD700;
     transform: scale(1.05);
-    
 }
 
+/* Time */
 #time {
     margin-top: 30px;
     font-size: 1.2rem;
 }
 
-.about-section, .blog-post {
-    display:flex;
+/* Sections */
+.about-section,
+.blog-post {
+    display: flex;
     align-items: center;
     justify-content: center;
-    gap: 40 px;
+    gap: 40px;
     flex-wrap: wrap;
     padding: 60px 20px;
     max-width: 1000px;
     margin: 0 auto;
     text-align: left;
 }
-.about-text, .blog-text {
+
+/* Text blocks */
+.about-text,
+.blog-text {
     flex: 1 1 400px;
     font-size: 1.2rem;
 }
-.about-image, .blog-image {
+
+/* Images */
+.about-image,
+.blog-image {
     flex: 0 0 200px;
 }
-.about-image img, .blog-image img {
+
+.about-image img,
+.blog-image img {
     width: 200px !important;
     max-height: 250px !important;
     height: auto !important;
-    object-fit:cover !important;
+    object-fit: cover !important;
     display: block !important;
+    border-radius: 8px;
 }
-@media (max-width 768px) {
-    .about-section, .blog-post {
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-section,
+    .blog-post {
         flex-direction: column;
         text-align: center;
     }
-    .about-image img, .blog-image img {
-        width:150 px !important;
-        max-height:180px !important;
-        margin-bottom:20px;
+
+    .about-image img,
+    .blog-image img {
+        width: 150px !important;
+        max-height: 180px !important;
+        margin-bottom: 20px;
     }
 }
