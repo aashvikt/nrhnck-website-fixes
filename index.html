@@ -1,33 +1,162 @@
-
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"> <!-- fixed charset -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- responsive -->
-    <title>NORA HANCOCK</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nora's blog</title>
+    <style>
+        /* --- Global & Layout Settings --- */
+        body {
+            background: #ffffff;
+            color: #111111;
+            font-family: "Times New Roman", Times, serif;
+            font-size: 18px;
+            line-height: 1.5;
+            max-width: 650px; 
+            margin: 40px auto; 
+            padding: 0 20px;
+        }
+
+        /* --- Typography & Links --- */
+        h1 {
+            font-size: 2.2rem;
+            margin: 0 0 10px 0;
+        }
+
+        h1 a {
+            color: #0000ee;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        p {
+            margin: 0 0 1em 0;
+        }
+
+        a {
+            color: #0000ee; 
+            text-decoration: underline;
+        }
+
+        a:visited {
+            color: #551a8b;
+        }
+
+        /* --- Navigation Links --- */
+        .links {
+            margin: 1rem 0 2rem 0;
+        }
+
+        .links a {
+            margin-right: 15px;
+            font-size: 1.1rem;
+        }
+
+        /* --- Images --- */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px 0;
+        }
+
+        .hero {
+            width: 100%; 
+            max-width: 100%;
+        }
+
+        /* --- Decorative Elements --- */
+        hr {
+            border: none;
+            border-top: 1px solid #cccccc; 
+            margin: 2.5rem 0;
+        }
+
+        .location-time {
+            font-size: 0.95rem;
+            color: #333;
+        }
+
+        /* --- Form / Newsletter Styling --- */
+        input[type="email"] {
+            font-family: inherit;
+            font-size: 0.95rem;
+            width: 250px;
+            padding: 6px;
+            border: 1px solid #777777;
+            background-color: #f9f9f9;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        button {
+            font-family: inherit;
+            font-size: 0.9rem;
+            padding: 4px 12px;
+            background-color: #efefef;
+            border: 1px solid #777777;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #e5e5e5;
+        }
+    </style>
 </head>
 <body>
 
-    <h1>NORA HANCOCK</h1>
-    <p class="subtitle">
+    <header>
+        <h1><a href="index.html" class="site-title">nora's blog</a></h1>
+        <nav class="links">
+            <a href="index.html">Home</a>
+            <a href="blog.html">Blog</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="feed.xml">RSS</a>
+        </nav>
+    </header>
 
-    </p>
+    <main>
+        <p class="meta-info">Latest project: <a href="posts/hyprland.html">My Hyprland Dotfiles</a></p>
+        
+        <img src="images/desktop.png" alt="My desktop setup" class="hero">
 
-    <!-- Hero image inside body -->
-    <img src="images/fern.jpg" class="hero">
+        <p class="location-time">New York, USA → <span id="ny-clock">Loading...</span></p>
+        
+        <p class="tagline">Welcome to my bloggg! I enjoy making yt videos, linux, reading and music.</p>
+        
+        <hr>
 
-    <!-- Links section -->
-   <nav>
-    <a href="index.html">home</a>
-    <a href="about.html">about</a>
-    <a href="blog/blog.html">blog</a>
-</nav>
+        <section class="newsletter">
+            <p>Subscribe to get a update whenever I drop a new post. No spam, no tracking. 👀</p>
+            <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Form submitted!');">
+                <input type="email" placeholder="Email address..." required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+    </main>
 
-    <!-- Dynamic time -->
-    <p id="time"></p>
+    <script>
+        // Script to force the clock to display New York time worldwide
+        function updateClock() {
+            const options = {
+                timeZone: 'America/New_York',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: false
+            };
+            
+            const formatter = new Intl.DateTimeFormat('en-US', options);
+            const element = document.getElementById('ny-clock');
+            if (element) {
+                element.innerText = formatter.format(new Date());
+            }
+        }
 
-    <script src="script.js"></script>
-    
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+
 </body>
-</html> 
+</html>
