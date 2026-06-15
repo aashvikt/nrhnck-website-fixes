@@ -1,118 +1,104 @@
-:root {
-    --bg: #f7f7fb;
-    --text: #1a1a1a;
-    --accent: #2563eb;
-    --accent-hover: #1d4ed8;
-    --card: #ffffff;
-}
-
+/* --- Global & Layout Settings --- */
 body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: Georgia, serif;
-    font-size: 20px;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+    background: #ffffff;
+    color: #111111;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 18px;
+    line-height: 1.5;
+    max-width: 650px; /* Narrower column for classic blog readability */
+    margin: 40px auto; /* Adds breathing room at the top and bottom */
+    padding: 0 20px;
 }
 
-/* Header */
-header {
-    padding: 60px 20px 40px;
+/* --- Typography & Links --- */
+h1 {
+    font-size: 2.2rem;
+    margin: 0 0 10px 0;
 }
 
-h1, h2 {
-    font-size: 3.5rem;
-    margin-bottom: 15px;
-}
-
-.subtitle {
+h2 {
     font-size: 1.5rem;
-    margin-bottom: 40px;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
 }
 
-/* Hero image */
-.hero {
-    width: 600px;
-    max-width: 90%;
-    height: 350px;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto 40px;
-    border-radius: 10px;
+p {
+    margin: 0 0 1em 0;
 }
 
-/* Navigation links */
-.links a {
-    color: var(--text);
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 1.2rem;
-    transition: color 0.3s, transform 0.2s;
-}
-
-.links a:hover {
-    color: var(--accent);
+/* Authentic browser-default colors for that raw web vibe */
+a {
+    color: #0000ee; 
     text-decoration: underline;
-    transform: scale(1.05);
 }
 
-/* Time */
-#time {
-    margin-top: 30px;
-    font-size: 1.2rem;
+a:visited {
+    color: #551a8b;
 }
 
-/* Sections */
-.about-section,
-.blog-post {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-    padding: 60px 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-    text-align: left;
+a:hover {
+    color: #0000ee;
 }
 
-/* Text blocks */
-.about-text,
-.blog-text {
-    flex: 1 1 400px;
-    font-size: 1.2rem;
+/* --- Navigation Links --- */
+.links {
+    margin: 1rem 0 2rem 0;
 }
 
-/* Images */
-.about-image,
-.blog-image {
-    flex: 0 0 200px;
+.links a {
+    margin-right: 15px;
+    font-size: 1.1rem;
 }
 
+/* --- Images --- */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+}
+
+/* Removed floats so images and text stack cleanly like the screenshot */
 .about-image img,
-.blog-image img {
-    width: 200px !important;
-    max-height: 250px !important;
-    height: auto !important;
-    object-fit: cover !important;
-    display: block !important;
-    border-radius: 8px;
+.blog-image img,
+.hero {
+    width: 100%; 
+    max-width: 100%;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .about-section,
-    .blog-post {
-        flex-direction: column;
-        text-align: center;
-    }
+/* --- Decorative Elements --- */
+hr {
+    border: none;
+    border-top: 1px solid #cccccc; /* Softer gray line instead of harsh black */
+    margin: 2.5rem 0;
+}
 
-    .about-image img,
-    .blog-image img {
-        width: 150px !important;
-        max-height: 180px !important;
-        margin-bottom: 20px;
-    }
+.tagline {
+    font-style: italic;
+    margin: 1.5rem 0;
+}
+
+/* --- Form / Newsletter Styling --- */
+input[type="email"] {
+    font-family: inherit;
+    font-size: 0.95rem;
+    width: 250px;
+    padding: 6px;
+    border: 1px solid #777777;
+    background-color: #f9f9f9;
+    display: block;
+    margin-bottom: 8px;
+}
+
+button {
+    font-family: inherit;
+    font-size: 0.9rem;
+    padding: 4px 12px;
+    background-color: #efefef;
+    border: 1px solid #777777;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e5e5e5;
 }
